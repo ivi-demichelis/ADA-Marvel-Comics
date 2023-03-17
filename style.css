@@ -1,0 +1,414 @@
+@import url("https://fonts.googleapis.com/css2?family=Bangers&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.boton-principal {
+  width: 100px;
+  font-size: 16px;
+}
+
+.boton-secundario {
+  width: 40px;
+  font-size: 25px;
+  font-weight: bold;
+}
+
+.contenedor-spinner {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.lds-hourglass {
+  display: inline-block;
+  position: relative;
+  width: 80px;
+  height: 80px;
+}
+
+.lds-hourglass:after {
+  content: " ";
+  display: block;
+  border-radius: 50%;
+  width: 0;
+  height: 0;
+  margin: 8px;
+  box-sizing: border-box;
+  border: 32px solid #fcf;
+  border-color: rgb(224, 15, 61) transparent rgb(224, 15, 61) transparent;
+  animation: lds-hourglass 1.2s infinite;
+}
+
+@keyframes lds-hourglass {
+  0% {
+    transform: rotate(0);
+    animation-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19);
+  }
+  50% {
+    transform: rotate(900deg);
+    animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+  }
+  100% {
+    transform: rotate(1800deg);
+  }
+}
+.overlay {
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  top: 0;
+  background-color: rgba(219, 206, 206, 0.6);
+  position: fixed;
+  left: 0;
+}
+
+footer, .contenedor-logo, .paginas {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+main .titulo-de-seccion {
+  font-weight: bold;
+  font-size: 20px;
+}
+
+main #tipo,
+main #orden {
+  font-family: Roboto;
+  font-size: 16px;
+  font-weight: bold;
+  border: 0;
+  margin-bottom: 10px;
+}
+
+.boton-principal, .boton-secundario {
+  height: 40px;
+  background-color: black;
+  font-family: "Roboto", sans-serif;
+  color: white;
+  border: transparent;
+  padding: 5px 10px;
+  margin: 5px;
+  cursor: pointer;
+  transition: 0.2s;
+}
+.boton-principal:hover, .boton-secundario:hover {
+  background-color: rgb(248, 18, 18);
+  outline: rgb(248, 18, 18);
+}
+
+.subtitulos {
+  font-size: 25px;
+  font-weight: bold;
+  margin: 19px 0 19px 0;
+}
+
+.contenedor-buscador {
+  display: flex;
+  justify-content: space-around;
+  margin: 40px 0 40px 0;
+  align-items: flex-end;
+}
+
+.link-logo {
+  text-decoration: none;
+}
+
+.fa-search {
+  position: relative;
+  top: 5px;
+  font-size: 13px;
+  left: 19px;
+}
+
+label {
+  font-size: 10px;
+  font-weight: bold;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: #757575;
+  margin-right: 10px;
+  position: relative;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  flex-grow: 1;
+}
+main .input-barra-de-busqueda {
+  border: 0;
+  border-bottom: 2px solid #151515;
+  width: 80%;
+  padding: 5px 35px;
+  border-radius: 0;
+  font-size: 15px;
+  margin-top: 10px;
+  box-sizing: border-box;
+}
+main .contador-resultados {
+  font-size: 13px;
+  font-weight: bold;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: #757575;
+  margin: 15px 0 15px 0;
+}
+main .resultados-seccion {
+  margin-left: 160px;
+}
+
+form {
+  background-color: rgb(5, 26, 119);
+  font-weight: bold;
+  color: white;
+  width: 100%;
+  margin: 0%;
+  box-sizing: border-box;
+  border: black solid 3px;
+  box-shadow: black solid 3px;
+}
+
+label {
+  color: white;
+  font-size: 16px;
+}
+
+section.resultados-seccion {
+  margin: 0%;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 30%;
+  color: aliceblue;
+  background-color: rgb(177, 40, 40);
+  padding: 0%;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+h2.titulo-de-seccion {
+  padding: 2%;
+  font-size: 18px;
+}
+
+p.contador-resultados {
+  color: rgb(190, 189, 189);
+  font-size: 17px;
+}
+
+.resultados {
+  display: flex;
+  flex-wrap: wrap;
+  flex-grow: 1;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  margin-top: 50px;
+  position: relative;
+  box-sizing: border-box;
+}
+
+.comic {
+  height: 400px;
+  width: 240px;
+  margin: 40px 20px 40px 20px;
+  transition: 0.2s;
+  cursor: pointer;
+}
+.comic-img-container {
+  width: 240px;
+  height: 380px;
+  overflow: hidden;
+}
+.comic-img-portada {
+  width: 100%;
+  height: 100%;
+}
+.comic .comic-titulo {
+  margin: 10px;
+  width: 200px;
+  font-size: 19px;
+}
+.comic:hover {
+  transform: translateY(-10px);
+  color: rgba(250, 17, 17, 0.925);
+}
+
+.paginas {
+  margin: 80px 0 80px 0;
+}
+
+.info-comic {
+  display: flex;
+  width: 100%;
+  height: auto;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.info-comic .info-comic-img {
+  width: 350px;
+  height: 500px;
+}
+.info-comic .info-comic-img .info-comic-img-portada {
+  width: 100%;
+  height: 100%;
+}
+.info-comic .info-comic-datos {
+  width: 800px;
+  margin-left: 60px;
+}
+
+.tarjeta-info-extra-contenedor {
+  width: 200px;
+  height: 400px;
+  display: flex;
+  flex-direction: column;
+  background-color: #212121;
+  margin: 30px;
+  margin-top: 40px;
+  transition: 0.2s;
+  cursor: pointer;
+}
+.tarjeta-info-extra-contenedor .tarjeta-info-extra-img {
+  width: 200px;
+  height: 280px;
+  overflow: hidden;
+}
+.tarjeta-info-extra-contenedor .tarjeta-info-extra-img .tarjeta-info-extra-img-portada {
+  width: 100%;
+  height: 100%;
+}
+.tarjeta-info-extra-contenedor .tarjeta-info-extra-img .tarjeta-info-extra-img-portada:hover {
+  transform: scale(1.1);
+  transition: 0.2s;
+}
+.tarjeta-info-extra-contenedor:hover {
+  background-color: rgba(250, 17, 17, 0.925);
+}
+
+.tarjeta-info-extra {
+  border: 0;
+  border-top: 5px solid rgba(250, 17, 17, 0.925);
+}
+.tarjeta-info-extra .tarjeta-info-extra-titulo {
+  color: white;
+  text-align: center;
+  margin: 15px;
+}
+
+.data-extra-comic-y-personajes {
+  display: flex;
+  margin: 0 80px 0 80px;
+  flex-wrap: wrap;
+}
+
+.hidden {
+  display: none;
+}
+
+.contenedor-info-extra {
+  margin: 20px 0 0 100px;
+}
+.contenedor-info-extra .titulo-info-extra {
+  margin: 20px 0 20px 100px;
+  font-size: 13px;
+  font-weight: bold;
+  letter-spacing: 1px;
+  color: #757575;
+}
+.contenedor-info-extra .subtitulo-info-extra {
+  margin: 20px 0 20px 100px;
+  font-size: 30px;
+}
+
+.respuesta-subtitulos {
+  font-size: 19px;
+}
+
+.comic-titulo {
+  font-size: 35px;
+  margin-bottom: 20px;
+}
+
+.boton-secundario:disabled {
+  color: #757575;
+  border-color: #757575;
+}
+
+@media (max-width: 1290px) {
+  .comic-titulo {
+    font-size: 25px;
+  }
+  .info-comic-datos {
+    margin-top: 40px;
+  }
+  .data-extra-comic-y-personajes {
+    justify-content: center;
+    align-items: center;
+  }
+  .contenedor-info-extra .subtitulo-info-extra {
+    margin-left: 40px;
+  }
+}
+@media (max-width: 850px) {
+  .contenedor-buscador {
+    display: flex;
+    flex-direction: column;
+  }
+  .input-barra-de-busqueda {
+    margin-bottom: 20px;
+  }
+  .comic-titulo {
+    font-size: 20px;
+  }
+  .contenedor-info-extra {
+    margin: 0;
+    align-items: center;
+  }
+  main .resultados-seccion {
+    margin: 0;
+  }
+}
+.contenedor-logo {
+  background-color: black;
+  width: 100%;
+  color: white;
+}
+
+.logo-ada {
+  background-color: red;
+  color: white;
+  font-family: "Bangers", cursive;
+  font-weight: bold;
+  font-size: 55px;
+  line-height: 50px;
+  margin: 0;
+  padding: 0 10px;
+}
+
+.img-contenedor {
+  width: 100%;
+}
+.img-contenedor .img-portada {
+  width: 100%;
+  min-height: 200px;
+}
+
+footer {
+  background-color: black;
+  width: 100%;
+  color: white;
+  height: 100px;
+}
+
+/*# sourceMappingURL=style.css.map */
